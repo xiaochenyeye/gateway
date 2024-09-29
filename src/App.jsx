@@ -1,12 +1,13 @@
 
 import './App.css'
-import Layout from './layout/index.jsx'
+import { useRoutes ,BrowserRouter} from 'react-router-dom'
+import routes from './routers/index'
 function App() {
-
+  const GetRoutes = ()=> useRoutes(routes)
   return (
-    <>
-      <Layout />
-    </>
+    <BrowserRouter>
+      <GetRoutes ></GetRoutes>
+    </BrowserRouter>
   )
 }
 
